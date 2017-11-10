@@ -66,9 +66,9 @@ public class MessageHandlerOnClient implements IMessageHandler<TargetEffectMessa
     final double HORIZONTAL_SPREAD = 1.5;
     for (int i = 0; i < NUMBER_OF_PARTICLES; ++i) {
       Vec3d targetCoordinates = message.getTargetCoordinates();
-      double spawnXpos = targetCoordinates.xCoord + (2*random.nextDouble() - 1) * HORIZONTAL_SPREAD;
-      double spawnYpos = targetCoordinates.yCoord;
-      double spawnZpos = targetCoordinates.zCoord + (2*random.nextDouble() - 1) * HORIZONTAL_SPREAD;
+      double spawnXpos = targetCoordinates.x + (2*random.nextDouble() - 1) * HORIZONTAL_SPREAD;
+      double spawnYpos = targetCoordinates.y;
+      double spawnZpos = targetCoordinates.z + (2*random.nextDouble() - 1) * HORIZONTAL_SPREAD;
       worldClient.spawnParticle(EnumParticleTypes.SPELL_INSTANT, spawnXpos, spawnYpos, spawnZpos, 0, 0, 0);
     }
 
